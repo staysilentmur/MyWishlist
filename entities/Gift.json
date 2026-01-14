@@ -1,0 +1,53 @@
+{
+  "name": "Gift",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Name of the gift"
+    },
+    "description": {
+      "type": "string",
+      "description": "Description of the gift"
+    },
+    "price": {
+      "type": "number",
+      "description": "Approximate price"
+    },
+    "image_url": {
+      "type": "string",
+      "description": "Image URL for the gift"
+    },
+    "link": {
+      "type": "string",
+      "description": "Link to purchase the gift"
+    },
+    "is_reserved": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether the gift has been reserved"
+    },
+    "reserved_by": {
+      "type": "string",
+      "description": "Name of the person who reserved the gift"
+    },
+    "reserved_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "When the gift was reserved"
+    },
+    "priority": {
+      "type": "string",
+      "enum": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "default": "medium",
+      "description": "How much you want this gift"
+    }
+  },
+  "required": [
+    "name"
+  ]
+}
